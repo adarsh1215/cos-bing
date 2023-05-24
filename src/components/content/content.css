@@ -1,0 +1,20 @@
+#content {
+
+    width: 80%;
+    /* border: 1px solid black; */
+}
+
+#content {
+
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-auto-rows: 50%;
+    row-gap: 1%;
+    overflow-y:hidden;
+    justify-content: space-evenly;
+}
+
+#content:hover {
+
+    overflow-y: overlay;
+}

@@ -1,0 +1,42 @@
+#navBar {
+
+    height: 8%;
+    background-color: rgb(114 142 185);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .navItem {
+
+
+} */
+
+#logo {
+    
+    position: absolute;
+    left: 0px;
+}
+
+#formItem {
+
+    height: 65%;
+    width: 30%;
+}
+
+#searchForm {
+
+    height: 100%;
+}
+
+#searchBox {
+
+    height: 100%;
+    width: 80%;
+}
+
+#searchBtn {
+
+    height: 100%;
+    width: 20%;
+}

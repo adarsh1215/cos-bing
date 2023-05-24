@@ -1,0 +1,26 @@
+#sideBar {
+
+    background-color: #3e4441;
+    border: 1px solid black;
+    width: 20%;
+}
+
+#sideBarHeader {
+
+    padding: 1%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#sideBarMain {
+
+    padding-top: 2%;
+    height: 90%;
+    overflow-y: hidden;
+    overflow-wrap: break-word;
+}
+
+#sideBarMain:hover {
+
+    overflow-y: overlay;
+}
