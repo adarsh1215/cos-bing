@@ -1,8 +1,8 @@
 import "./homepage.css"
 import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import NavBar from "../components/nav/NavBar";
-import SideBar from "../components/side/SideBar";
-import Content from "../components/content/Content";
+import Main from "./main/Main";
+import Watch from "../components/watch/Watch";
 
 function HomePage() {
 
@@ -10,10 +10,12 @@ function HomePage() {
 
         <div id = "homePage">
             <NavBar />
-            <div id = "main">
-                <Content />
-                <SideBar />
-            </div>
+            
+            <Routes>
+
+                <Route path="/" element = {<Main />} />
+                <Route path="/watch" element = {<Watch />} />
+            </Routes>
         </div>
     );
 }
