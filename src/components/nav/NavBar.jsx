@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
+import { useNavigate, createSearchParams } from "react-router-dom";
 import "./navBar.css"
-import { useNavigate } from "react-router-dom";
 
 function NavBar() {
 
@@ -26,9 +26,12 @@ function NavBar() {
     
     // function to navigate to search query when user serch
     function submitHandler(event) {
-        
         event.preventDefault();
-        navigate(`search?key=${searchKey}`);
+
+        navigate({
+            pathname: '/search',
+            search: `?${createSearchParams({key: searchKey})}`,
+          });
     }
 
     return (

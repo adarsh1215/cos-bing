@@ -1,6 +1,11 @@
 
 
-async function getvideos() {
+async function getvideos(key) {
+
+    var dynamicUrl;
+
+    if(key) dynamicUrl = `search/?q=${key}hl=en&gl=IN`;
+    else dynamicUrl = `home/?hl=en&gl=IN`;
 
     // options
     const options = {
@@ -11,7 +16,7 @@ async function getvideos() {
         }
     };
 
-const url = 'https://youtube138.p.rapidapi.com/home/?hl=en&gl=IN';
+const url = `https://youtube138.p.rapidapi.com/${dynamicUrl}`;
 
     const res = await fetch(url, options);
 
@@ -22,5 +27,5 @@ const url = 'https://youtube138.p.rapidapi.com/home/?hl=en&gl=IN';
     return contents;
 }
 
-export default getvideos();
+export default getvideos;
 

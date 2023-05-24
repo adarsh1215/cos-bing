@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import Preview from "../preview/preview";
 import "./content.css"
 // import data from "./tempdata";
@@ -6,17 +7,17 @@ import getVideos from "../apiCalls/getVideos.js";
 
 function Content() {
 
+    const [params, setParams] = useSearchParams();
+
     // data
     const [videos, setVideos] = useState([]);
 
     useEffect(() => {
 
-        getVideos;
-
-        getVideos.then(data => setVideos(data));
+        getVideos(params.get("key")).then(data => setVideos(data));
         // setVideos(data);
         
-    }, []);
+    }, [params]);
 
     return (
 
