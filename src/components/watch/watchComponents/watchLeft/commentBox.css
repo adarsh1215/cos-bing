@@ -1,0 +1,59 @@
+.commentBox {
+
+    width: 100%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 2%;
+    box-sizing: border-box;
+}
+
+.commentBoxInner {
+    
+    width: 100%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 2%;
+    padding-bottom: 2.5%;
+    border-radius: 5%;
+    box-sizing: border-box;
+    height: max-content;
+    border: 1px solid black;
+    background-color: rgb(144, 217, 216);
+}
+
+.commentBoxHeader {
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: max-content;
+}
+
+.commentAuthorLogo {
+
+    width: 10%;
+    height: max-content;
+}
+
+.commentAuthorLogo>img {
+
+    width: 100%;
+    border-radius: 100%;
+}
+
+.commentAuthorTitle {
+
+    width: 85%;
+    padding-left: 5%;
+    line-height: 1rem;
+    height: 1rem;
+    overflow: hidden;
+}
+
+.commentContent {
+
+    width: 100%;
+    max-height: 20vh;
+    overflow: hidden;
+}

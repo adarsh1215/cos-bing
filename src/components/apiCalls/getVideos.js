@@ -4,9 +4,9 @@ async function getvideos(queryType ,key) {
 
     var dynamicUrl;
 
-    if(queryType == "search") dynamicUrl = `search/?q=${key}hl=en&gl=IN`;
-    else if(queryType == "related") dynamicUrl = `video/related-contents/?id=${key}&hl=en&gl=IN`
-    else dynamicUrl = `home/?hl=en&gl=IN`;
+    if(queryType == "search") dynamicUrl = `search/?q=${key}hl=hi&gl=IN`;
+    else if(queryType == "related") dynamicUrl = `video/related-contents/?id=${key}&hl=hi&gl=IN`
+    else dynamicUrl = `home/?hl=hi&gl=IN`;
 
     // options
     const options = {

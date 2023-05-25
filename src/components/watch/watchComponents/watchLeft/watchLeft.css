@@ -1,5 +1,8 @@
 #watchLeft {
 
     width: 20%;
-    background-color: blue;
+    height: 100%;
+    overflow: overlay;
+    display: flex;
+    flex-direction: column;
 }
