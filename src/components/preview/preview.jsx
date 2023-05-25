@@ -5,9 +5,11 @@ import "./preview.css"
 function Preview({data}) {
 
     const navigate = useNavigate();
-    
+
     const type = data.type;
     const video = data.video;
+    
+    if(type != "video") return <></>
 
     const { videoId, title, thumbnails, stats, author } = video;
 
@@ -20,6 +22,7 @@ function Preview({data}) {
             search: `?${createSearchParams({ videoId: videoId })}`
         });
     }
+
 
     return (
 

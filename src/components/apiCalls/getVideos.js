@@ -23,7 +23,7 @@ const url = `https://youtube138.p.rapidapi.com/${dynamicUrl}`;
 
     const {contents} = await res.json();
     
-    contents.map(video => console.log(video.video.title));
+    contents.map(video => console.log(video));
 
     return contents;
 }
