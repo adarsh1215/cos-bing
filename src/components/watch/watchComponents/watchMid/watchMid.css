@@ -1,5 +1,16 @@
 #watchMid {
 
-    width: 20%;
-    background-color: blue;
+    box-sizing: border-box;
+    border: 1px solid blue;
+    background-color: greenyellow;
+    /* display: flex;
+    flex-direction: column; */
+    width: 60%;
+    height: 100%;
+}
+
+#play {
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
 }

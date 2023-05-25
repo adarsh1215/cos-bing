@@ -1,21 +1,13 @@
-import ReactPlayer from "react-player";
-import { useSearchParams } from "react-router-dom";
-
 import "./watchLeft.css"
 
-function WatchLeft() {
-
-    const [params, setParams] = useSearchParams();
-    console.log(params.get("videoId"));
+function watchLeft() {
 
     return (
 
-        <div id = "watchLeft">
-            <div id = "play">
-                <ReactPlayer url = {`https://www.youtube.com/watch?v=${params.get("videoId")}-U`} width={"100%"} height={"100%"} />
-            </div>
+        <div id="watchLeft">
+
         </div>
     );
 }
 
-export default WatchLeft;
+export default watchLeft;

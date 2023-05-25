@@ -1,6 +1,6 @@
-import WatchLeft from "./watchComponents/watchLeft/WatchLeft.jsx";
+import WatchLeft from "./watchComponents/watchLeft/WatchLeft.jsx"
 import WatchRight from "./watchComponents/watchRight/WathcRight.jsx"
-import WatchMid from "./watchComponents/watchMid/watchMid.jsx"
+import WatchMid from "./watchComponents/watchMid/WatchMid.jsx"
 
 import "./watch.css"
 

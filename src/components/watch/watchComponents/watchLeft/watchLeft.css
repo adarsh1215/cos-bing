@@ -1,14 +1,5 @@
 #watchLeft {
 
-    box-sizing: border-box;
-    border: 1px solid blue;
-    background-color: greenyellow;
-    height: 80%;
-    width: 60%;
-}
-
-#play {
-
-    width: 100%;
-    height: 100%;
+    width: 20%;
+    background-color: blue;
 }
