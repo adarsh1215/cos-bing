@@ -14,7 +14,7 @@ function Content() {
 
     useEffect(() => {
 
-        getVideos(params.get("key")).then(data => setVideos(data));
+        getVideos("search" ,params.get("key")).then(data => setVideos(data));
         // setVideos(data);
         
     }, [params]);
