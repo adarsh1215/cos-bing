@@ -13,7 +13,7 @@ function HomePage() {
             
             <Routes>
 
-                <Route path="/" element = {<Main />} />
+                <Route path="*" element = {<Main />} />
                 <Route path="/watch" element = {<Watch />} />
             </Routes>
         </div>

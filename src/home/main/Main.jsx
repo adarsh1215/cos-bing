@@ -8,7 +8,7 @@ function Main() {
     return (
 
         <div id="main">
-            {/* <Content /> */}
+            <Content />
             <SideBar />
         </div>
     );

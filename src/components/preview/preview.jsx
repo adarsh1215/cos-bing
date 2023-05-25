@@ -1,16 +1,30 @@
+import { createSearchParams, useNavigate } from "react-router-dom";
+
 import "./preview.css"
 
 function Preview({data}) {
 
+    const navigate = useNavigate();
+    
     const type = data.type;
     const video = data.video;
 
     const { videoId, title, thumbnails, stats, author } = video;
 
+    function playVideo(event) {
+        console.log(createSearchParams({videoId: videoId}));
+
+        navigate({
+
+            pathname: "/watch",
+            search: `?${createSearchParams({ videoId: videoId })}`
+        });
+    }
+
     return (
 
             <div className="preview" id = {`preview${type}`}>
-                <button className="insidePreview">
+                <button className="insidePreview" onClick={playVideo}>
                     <img src = {thumbnails[0].url} alt = {title} width = "100%" className="thumbnail" />
                 </button>
                 <div className="previewFooter">
