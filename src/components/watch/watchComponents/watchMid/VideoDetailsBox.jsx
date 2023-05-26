@@ -1,5 +1,7 @@
 import "./videoDetailsBox.css"
 
+import formatNumber from "../../../helpersFunctions/formatNumber";
+
 function VideoDetailsBox({ videoDetails }) {
 
     const { author, stats, title } = videoDetails;
@@ -12,7 +14,7 @@ function VideoDetailsBox({ videoDetails }) {
             <div className="vidoTitle">
                 {title}
             </div>
-    
+
             <div className="videoDetails">
     
                 <div className="channelInfo">
@@ -36,11 +38,11 @@ function VideoDetailsBox({ videoDetails }) {
                 <div className="interact">
                     <div className="likes" >
                         <div>Likes</div>
-                        {stats.likes} 
+                        {formatNumber(stats.likes)} 
                     </div>
                     <div className="views">
                         <div>Views</div>
-                        {stats.views} 
+                        {formatNumber(stats.views)} 
                     </div>
                 </div>
     

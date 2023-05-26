@@ -2,4 +2,10 @@
 
     width: 100%;
     background-color:burlywood;
+    position: relative;
+}
+
+.discriptionToggleBtn {
+
+    float: right;
 }
