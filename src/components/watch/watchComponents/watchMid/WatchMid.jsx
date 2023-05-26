@@ -7,7 +7,6 @@ import "./watchMid.css"
 function WatchMid() {
 
     const [params, setParams] = useSearchParams();
-    console.log(params.get("videoId"));
 
     return (
 

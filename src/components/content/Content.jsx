@@ -14,7 +14,10 @@ function Content() {
 
     useEffect(() => {
 
-        getVideos("search" ,params.get("key")).then(data => setVideos(data));
+        console.log(params.get("key"));
+
+        if(params.get("key") == null) getVideos("home", "null").then(data => setVideos(data));
+        else getVideos("search" , params.get("key")).then(data => setVideos(data));
         // setVideos(data);
         
     }, [params]);

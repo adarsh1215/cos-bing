@@ -1,7 +1,6 @@
-async function getComments(videoId) {
+async function getChannelDetails(channelId) {
 
-    // url
-    const url = `https://youtube-v3-alternative.p.rapidapi.com/comments?id=${videoId}`;
+    const url = `https://youtube-v3-alternative.p.rapidapi.com/channel?id=${channelId}`;
 
     const options = {
         method: 'GET',
@@ -13,9 +12,11 @@ async function getComments(videoId) {
 
     const res = await fetch(url, options);
 
-    const { data } = await res.json();
+    const { meta } = await res.json();
 
-    return data;
+    console.log(meta);
+
+    return meta;
 }
 
-export default getComments;
+export default getChannelDetails;

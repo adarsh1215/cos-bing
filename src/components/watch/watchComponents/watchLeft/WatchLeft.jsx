@@ -24,13 +24,13 @@ function watchLeft() {
 
         <div id="watchLeft">
 
-            {
+            {   comments !== undefined &&
                 
                 comments.map((comment, idx) => {
 
                     return (
 
-                        <CommentBox key={idx} comment = {comment} />
+                        <CommentBox key={idx} data = {comment} />
                     );
                 })
             }

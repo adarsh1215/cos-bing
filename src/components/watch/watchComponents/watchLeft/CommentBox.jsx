@@ -1,10 +1,8 @@
 import "./commentBox.css"
 
-function CommentBox({ comment }) {
+function CommentBox({ data }) {
 
-    const { author, content } = comment;
-
-    const { avatar, title } = author;
+    const { authorDisplayName, textDisplay, authorProfileImageUrl } = data;
 
     return (
 
@@ -12,15 +10,15 @@ function CommentBox({ comment }) {
             <div className="commentBoxInner">
                 <div className="commentBoxHeader">
                     <div className="commentAuthorLogo">
-                        <img src= {avatar[2].url} alt = "" />
+                        <img src= {authorProfileImageUrl[2].url} alt = "" />
                     </div>
                     <div className="commentAuthorTitle">
-                        {title}
+                        {authorDisplayName}
                     </div>
                 </div>
                 
                 <div className="commentContent">
-                    {content}
+                    {textDisplay}
                 </div>
             </div>
         </div>

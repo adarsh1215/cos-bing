@@ -6,12 +6,7 @@ function Preview({data}) {
 
     const navigate = useNavigate();
 
-    const type = data.type;
-    const video = data.video;
-    
-    if(type != "video") return <></>
-
-    const { videoId, title, thumbnails, stats, author } = video;
+    var { videoId, title, channelTitle, thumbnail, authorThumbnail, channelThumbnail } = data;
 
     function playVideo(event) {
         console.log(createSearchParams({videoId: videoId}));
@@ -23,23 +18,24 @@ function Preview({data}) {
         });
     }
 
+    if(channelThumbnail == undefined) channelThumbnail = authorThumbnail;
 
     return (
 
-            <div className="preview" id = {`preview${type}`}>
+            <div className="preview">
                 <button className="insidePreview" onClick={playVideo}>
-                    <img src = {thumbnails[0].url} alt = {title} width = "100%" className="thumbnail" />
+                    <img src = {thumbnail[1].url} alt = {title} width = "100%" className="thumbnail" />
                 </button>
                 <div className="previewFooter">
                     <div className="previewFooterLogo">
-                        <img src = {author.avatar[0].url} alt= {author.title} width= "100%" className="channelLogo" />
+                        <img src = {channelThumbnail[0].url} alt= {channelTitle} width= "100%" className="channelLogo" />
                     </div>
                     <div className="previewFooterText">
                         <div className="videoTitle">
                             {title}
                         </div>
                         <div className="channelName">
-                            {author.title}
+                            {channelTitle}
                         </div>
                     </div>
                 </div>

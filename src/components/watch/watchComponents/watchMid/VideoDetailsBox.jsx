@@ -2,10 +2,12 @@ import "./videoDetailsBox.css"
 
 import formatNumber from "../../../helpersFunctions/formatNumber";
 
-function VideoDetailsBox({ videoDetails }) {
+function VideoDetailsBox({ videoDetails, channelDetails }) {
 
-    const { author, stats, title } = videoDetails;
-    const { avatar } = author;
+    const { title, channelTitle, description, viewCount, thumbnail } = videoDetails;
+
+    const channelThumbnail = channelDetails.thumbnail == undefined ? "": channelDetails.thumbnail[0];
+
     console.log(videoDetails);
 
     return (
@@ -19,14 +21,14 @@ function VideoDetailsBox({ videoDetails }) {
     
                 <div className="channelInfo">
                     <div className="watchMidChannelLogo">
-                        <img src= {avatar[2].url} alt="" />
+                        <img src= {channelThumbnail.url} alt="" />
                     </div>
                     <div className="channelLogoRight">
                         <div className="videoDetailchannelName">
-                            {author.title}
+                            {channelTitle}
                         </div>
                         <div className="subscribeCount">
-                            {author.stats.subscribersText}
+                            {channelDetails.subscriberCount} subscribers
                         </div>
                     </div>
                 </div>
@@ -38,11 +40,11 @@ function VideoDetailsBox({ videoDetails }) {
                 <div className="interact">
                     <div className="likes" >
                         <div>Likes</div>
-                        {formatNumber(stats.likes)} 
+                        {formatNumber(viewCount)} 
                     </div>
                     <div className="views">
                         <div>Views</div>
-                        {formatNumber(stats.views)} 
+                        {formatNumber(viewCount)} 
                     </div>
                 </div>
     
