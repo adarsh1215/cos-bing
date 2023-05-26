@@ -14,11 +14,20 @@
     height:max-content;
     padding: 0%;
     border: none;
+    border-radius: 5%;
+    overflow: hidden;
 }
+
 
 .thumbnail {
 
     border-radius: 5%;
+}
+
+.thumbnail:hover {
+
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 .previewFooter {

@@ -2,7 +2,13 @@
 
     width: 20%;
     height: 100%;
-    overflow: overlay;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+}
+
+#watchLeft:hover {
+
+    overflow: overlay;
+    overflow-x: hidden;
 }
