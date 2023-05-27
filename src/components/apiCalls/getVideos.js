@@ -24,12 +24,14 @@ const url = `https://youtube-v3-alternative.p.rapidapi.com/${dynamicUrl}`;
     const res = await fetch(url, options);
 
     const { data } = await res.json();
-
-    console.log(data);
     
     // data.map(video => console.log(video));
 
-    return data;
+    console.log("getvideos called");
+
+    if(res.status == 200) return data;
+
+    return [];
 }
 
 export default getvideos;

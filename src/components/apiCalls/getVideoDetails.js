@@ -14,7 +14,7 @@ async function getVideoDetails(videoId) {
 
     const data = await res.json();
 
-    console.log("hi");
+    console.log("getVideoDetails called");
 
     return data;
 }

@@ -14,6 +14,7 @@ async function getComments(videoId) {
     const res = await fetch(url, options);
 
     const { data } = await res.json();
+    console.log("getComments called")
 
     return data;
 }

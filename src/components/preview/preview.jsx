@@ -24,7 +24,7 @@ function Preview({data}) {
 
             <div className="preview">
                 <button className="insidePreview" onClick={playVideo}>
-                    <img src = {thumbnail[1].url} alt = {title} width = "100%" className="thumbnail" />
+                    <img src = {thumbnail[0].url} alt = {title} width = "100%" className="thumbnail" />
                 </button>
                 <div className="previewFooter">
                     <div className="previewFooterLogo">

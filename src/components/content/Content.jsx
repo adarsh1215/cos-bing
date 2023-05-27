@@ -7,6 +7,7 @@ import getVideos from "../apiCalls/getVideos.js";
 
 function Content() {
 
+    const [prevParams, setPrevParams] = useState("");
     const [params, setParams] = useSearchParams();
 
     // data
@@ -14,11 +15,14 @@ function Content() {
 
     useEffect(() => {
 
-        console.log(params.get("key"));
+        if(prevParams !== params.get("key")) {
 
-        if(params.get("key") == null) getVideos("home", "null").then(data => setVideos(data));
-        else getVideos("search" , params.get("key")).then(data => setVideos(data));
-        // setVideos(data);
+            setPrevParams(params.get("key"));
+
+            if(params.get("key") == null) getVideos("home", "null").then(data => setVideos(data));
+            else getVideos("search" , params.get("key")).then(data => setVideos(data));
+
+        }
         
     }, [params]);
 
@@ -26,7 +30,7 @@ function Content() {
 
         <div id = "content">
             
-            {
+            {   videos.length !== 0 &&
 
                 videos.map((video, idx) => {
 

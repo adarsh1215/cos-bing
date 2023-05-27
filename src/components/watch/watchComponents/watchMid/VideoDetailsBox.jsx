@@ -5,8 +5,9 @@ import formatNumber from "../../../helpersFunctions/formatNumber";
 function VideoDetailsBox({ videoDetails, channelDetails }) {
 
     const { title, channelTitle, description, viewCount, thumbnail } = videoDetails;
+    console.log(channelDetails);
 
-    const channelThumbnail = channelDetails.thumbnail == undefined ? "": channelDetails.thumbnail[0];
+    const channelThumbnail = channelDetails == undefined ? "": channelDetails.thumbnail[0];
 
     console.log(videoDetails);
 

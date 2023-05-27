@@ -14,7 +14,7 @@ async function getChannelDetails(channelId) {
 
     const { meta } = await res.json();
 
-    console.log(meta);
+    console.log("getChannelDetails called");
 
     return meta;
 }

@@ -8,16 +8,23 @@ import getComments from "../../../apiCalls/getComents"
 
 function watchLeft() {
 
+    const [prevParams, setPrevParams] = useState("");
     const [params, setParams] = useSearchParams();
-
     const [comments, setComments] = useState([]);
 
     useEffect(() => {
 
-        getComments(params.get("videoId")).then(comments => {
+        setPrevParams(params.get("videoId"));
 
-            setComments(comments);
-        })
+        if(prevParams !== params.get("videoId")) {
+
+            getComments(params.get("videoId")).then(comments => {
+    
+                setComments(comments);
+            })
+
+        }
+        
     }, [params]);
 
     return (

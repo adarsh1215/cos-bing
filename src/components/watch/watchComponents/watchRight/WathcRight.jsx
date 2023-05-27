@@ -7,19 +7,26 @@ import "./watchRight.css"
 
 function WatchRight() {
 
+    const [prevParams, setPrevParams] = useState("");
     const [params, setParams] = useSearchParams();
     const [relatedVideos, setRelatedVideos] = useState([]);
 
-    useEffect(() => {   
+    useEffect(() => {
 
-        getvideos("related", params.get("videoId")).then(data => setRelatedVideos(data));
+        if(prevParams !== params.get("videoId")) {
+
+            setPrevParams(params.get("videoId"));
+
+            getvideos("related", params.get("videoId")).then(data => setRelatedVideos(data));
+        }
+
     }, [params]);
 
     return (
 
         <div id="WatchRight">
 
-            {
+            { relatedVideos.length !== 0 &&
 
                 relatedVideos.map((video, idx) => {
 
