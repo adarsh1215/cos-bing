@@ -29,6 +29,9 @@
 
     width: 100%;
     border-radius: 100%;
+    border-width: 10%;
+    border-style:solid;
+    border-color: rgb(149, 181, 233);
 }
 
 .channelLogoRight {
@@ -58,6 +61,7 @@
     height: 40%;
     border-style:ridge;
     border-radius: 2em;
+    border-color: rgb(125, 220, 199);
     font-weight: 600;
     font-size: 1.2rem;
     color: antiquewhite;
@@ -82,11 +86,13 @@
 
 .interact> .likes> div {
 
+    font-weight: bold;
     text-align: center;
 }
 
 .interact> .views> div {
 
+    font-weight: bold;
     text-align: center;
 }
 

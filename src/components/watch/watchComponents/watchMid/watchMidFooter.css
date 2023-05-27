@@ -1,11 +1,17 @@
 #watchMidFooter {
 
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    background-color:burlywood;
-    position: relative;
+    height: 20%;
 }
 
-.discriptionToggleBtn {
+.descriptionToggleBtn {
 
-    float: right;
+    display: inline;
+    align-self: end;
+    position: absolute;
+    width: 2%;
+    border-radius: 25%;
+    aspect-ratio: 1 / 1.1;
 }

@@ -1,0 +1,9 @@
+.descriptionBox {
+
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2%;
+    font-weight: bold;
+    height: 100%;
+    overflow-y: overlay;
+}

@@ -6,7 +6,7 @@ import getChannelDetails from "../../../apiCalls/getChannelDetails";
 
 import "./watchMidFooter.css"
 import VideoDetailsBox from "./VideoDetailsBox.jsx";
-import DiscriptionBox from "./DiscriptionBox.jsx";
+import DescriptionBox from "./DescriptionBox.jsx";
 
 function WatchMidFooter() {
 
@@ -14,7 +14,7 @@ function WatchMidFooter() {
     const [params, setParams] = useSearchParams();
     const [videoDetails, setVideoDetails] = useState({});
     const [channelDetails, setChannelDetails] = useState({});
-    const [discriptionToggle, setDiscriptionToggle] = useState(false);
+    const [descriptionToggle, setDescriptionToggle] = useState(false);
 
     useEffect(() => {
 
@@ -28,6 +28,7 @@ function WatchMidFooter() {
     
                     setChannelDetails(data);
                     setVideoDetails(details);
+                    console.log(data);
                 })
             });
         }
@@ -38,12 +39,12 @@ function WatchMidFooter() {
     return (
 
         <div id="watchMidFooter">
-            <button className="discriptionToggleBtn" onClick={() => setDiscriptionToggle(!discriptionToggle)}>
-                Toggle
+            <button className="descriptionToggleBtn" onClick={() => setDescriptionToggle(!descriptionToggle)}>
+                
             </button>
            { ( videoDetails && channelDetails && Object.keys(videoDetails).length !== 0 && Object.keys(channelDetails).length !== 0) ?
 
-                discriptionToggle ? <DiscriptionBox /> : <VideoDetailsBox videoDetails = {videoDetails} channelDetails = {channelDetails} />:<></>
+                descriptionToggle ? <DescriptionBox description = {channelDetails.description} /> : <VideoDetailsBox videoDetails = {videoDetails} channelDetails = {channelDetails} />:<></>
 
            }
         </div>
