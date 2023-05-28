@@ -1,21 +1,27 @@
 #navBar {
 
     height: 8%;
-    background-color: rgb(114 142 185);
     display:flex;
     justify-content: center;
     align-items: center;
 }
 
-/* .navItem {
-
-
-} */
 
 #logo {
     
     position: absolute;
-    left: 0px;
+    left: 1%;
+}
+
+#logo:hover {
+    
+    animation: rotate 3s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+
+    100% { transform: rotate(360deg); }
 }
 
 #formItem {
@@ -33,10 +39,31 @@
 
     height: 100%;
     width: 80%;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    padding: 2%;
+    border: 1px solid rgb(75, 74, 74);
+    background-color: rgb(255, 248, 239);
+    transition: .5s;
 }
+#searchBox:focus {
+
+    outline: none;
+    border: 2px solid rgb(0, 153, 255);
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transform: scaleX(1.1);
+    transition: .5s;
+}
+
 
 #searchBtn {
 
     height: 100%;
     width: 20%;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: .5s;
+    background-color: rgb(229, 221, 255);
+    border: 1px solid rgb(93, 88, 78);
 }

@@ -39,31 +39,31 @@ async function getSummary(videoId) {
     // console.log(summary);
 
     // translate summay
-    const translateUrl = 'https://text-translator2.p.rapidapi.com/translate';
+    // const translateUrl = 'https://text-translator2.p.rapidapi.com/translate';
 
-    const translateOptions = {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/x-www-form-urlencoded',
-            'X-RapidAPI-Key': 'e0dd76157emsh7080062fcaf0e78p12f094jsn0125d1362bbb',
-            'X-RapidAPI-Host': 'text-translator2.p.rapidapi.com'
-        },
-        body: new URLSearchParams({
-            source_language: 'auto',
-            target_language: 'hi',
-            text: subtitles
-        })
-    };
+    // const translateOptions = {
+    //     method: 'POST',
+    //     headers: {
+    //         'content-type': 'application/x-www-form-urlencoded',
+    //         'X-RapidAPI-Key': 'e0dd76157emsh7080062fcaf0e78p12f094jsn0125d1362bbb',
+    //         'X-RapidAPI-Host': 'text-translator2.p.rapidapi.com'
+    //     },
+    //     body: new URLSearchParams({
+    //         source_language: 'auto',
+    //         target_language: 'hi',
+    //         text: subtitles
+    //     })
+    // };
 
-    const resTranslate = await fetch(translateUrl, translateOptions);
+    // const resTranslate = await fetch(translateUrl, translateOptions);
 
-    const { data } = await resTranslate.json();
+    // const { data } = await resTranslate.json();
 
-    const translatedText = data.translatedText;
+    // const translatedText = data.translatedText;
 
-    console.log(data.translatedText);
+    // console.log(data.translatedText);
 
-    return translatedText;
+    return subtitles;
 
 }
 

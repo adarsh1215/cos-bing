@@ -2,8 +2,9 @@
 
     /* background-color: blueviolet; */
     /* border: 1px solid black; */
-    box-sizing: border-box;
     width: 100%;
+    padding: 0.1rem;
+    box-sizing: border-box;
     height: max-content;
 }
 
@@ -43,6 +44,7 @@
 .channelLogo {
 
     border-radius: 100%;
+    border: 2px solid rgb(57, 47, 47);
 }
 
 .previewFooterText {
