@@ -2,26 +2,33 @@ import { useEffect, useState } from "react"
 import { useSearchParams } from "react-router-dom"
 
 import "./watchLeft.css"
-import CommentBox from "./CommentBox"
+import Comments from "./Comments"
+import Summary from "./Summary"
 
 import getComments from "../../../apiCalls/getComents"
+import getSummary from "../../../apiCalls/getSummary"
 
 function watchLeft() {
 
     const [prevParams, setPrevParams] = useState("");
     const [params, setParams] = useSearchParams();
     const [comments, setComments] = useState([]);
+    const [watchLeftToggle, setWatchLeftToggle] = useState(true);
+    const [summary, setSummary] = useState("");
 
     useEffect(() => {
 
-        setPrevParams(params.get("videoId"));
-
+        
         if(prevParams !== params.get("videoId")) {
+            
+            setPrevParams(params.get("videoId"));
 
             getComments(params.get("videoId")).then(comments => {
     
                 setComments(comments);
             })
+
+            getSummary(params.get("videoId")).then(summary => setSummary(summary));
 
         }
         
@@ -31,16 +38,12 @@ function watchLeft() {
 
         <div id="watchLeft">
 
-            {   comments !== undefined &&
-                
-                comments.map((comment, idx) => {
+            <button className="watchLeftToggleBtn" onClick={() => setWatchLeftToggle(!watchLeftToggle)}></button>   
 
-                    return (
+            {
 
-                        <CommentBox key={idx} data = {comment} />
-                    );
-                })
-            }
+                watchLeftToggle ? <Comments comments={ comments } /> : <Summary summary = { summary } />
+            }         
         </div>
     );
 }

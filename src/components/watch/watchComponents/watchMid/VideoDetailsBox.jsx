@@ -14,7 +14,7 @@ function VideoDetailsBox({ videoDetails, channelDetails }) {
     return (
 
         <>
-            <div className="vidoTitle">
+            <div className="videoDetailBoxVideoTitle">
                 {title}
             </div>
 

@@ -29,6 +29,10 @@ const url = `https://youtube-v3-alternative.p.rapidapi.com/${dynamicUrl}`;
 
     console.log("getvideos called");
 
+    console.log(data);
+
+    console.log(data[0].type);
+
     if(res.status == 200) return data;
 
     return [];

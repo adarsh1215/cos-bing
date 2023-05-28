@@ -30,13 +30,13 @@ function Content() {
 
         <div id = "content">
             
-            {   videos.length !== 0 &&
+            { 
 
                 videos.map((video, idx) => {
 
                     return (
 
-                        <Preview key={idx} data = {video} />
+                        (video.type == "video" || video.type == undefined) && <Preview key={idx} data = {video} />
                     );
                 })
             }

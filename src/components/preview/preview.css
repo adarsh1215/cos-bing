@@ -56,6 +56,9 @@
     /* background-color: burlywood; */
     padding: 1%;
     font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
 }
 
 .channelName {

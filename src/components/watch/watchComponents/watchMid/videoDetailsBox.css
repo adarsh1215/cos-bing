@@ -1,15 +1,15 @@
-.vidoTitle {
-
-    box-sizing: border-box;
-    padding: 2%;
-    font-size: 1.5em;
-}
-
 .videoDetails {
-
+    
     width: 100%;
     display: flex;
     flex-direction: row;
+}
+
+.videoDetailBoxVideoTitle {
+
+    box-sizing: border-box;
+    padding: 1%;
+    font-size: 1.5em;
 }
 
 .channelInfo {
