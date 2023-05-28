@@ -1,10 +1,12 @@
 import CommentBox from "./CommentBox"
 
+import "./comments.css"
+
 function Comments({ comments }) {
 
     return (
 
-        <>
+        <div className="CommentsContainer">
         {   comments !== undefined &&
                 
             comments.map((comment, idx) => {
@@ -15,7 +17,7 @@ function Comments({ comments }) {
                 );
             })
         }
-        </>
+        </div>
     );
 }
 

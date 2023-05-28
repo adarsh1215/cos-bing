@@ -12,3 +12,16 @@
     overflow: overlay;
     overflow-x: hidden;
 }
+
+.watchLeftToggleBtn {
+    
+    width: 100%;
+    height: 20%;
+    background-color: brown;
+}
+
+#watchLeft> div {
+
+    padding: 2%;
+    overflow-y: overlay;
+}

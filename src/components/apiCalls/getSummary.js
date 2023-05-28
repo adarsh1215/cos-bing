@@ -14,27 +14,29 @@ async function getSummary(videoId) {
     const resSubtitles = await fetch(url, options);
     const subtitles = await resSubtitles.text();
 
+    console.log(subtitles);
+
     // gettin summary 
-    // const encodedParams = new URLSearchParams();
+    const encodedParams = new URLSearchParams();
 
-    // encodedParams.set("text", subtitles);
+    encodedParams.set("text", subtitles);
 
-    // const SummaryUrl = 'https://ai-powered-text-summarizer.p.rapidapi.com/summarize';
+    const SummaryUrl = 'https://ai-powered-text-summarizer.p.rapidapi.com/summarize';
 
-    // const Summaryptions = {
-    //     method: 'POST',
-    //     headers: {
-    //         'content-type': 'application/x-www-form-urlencoded',
-    //         'X-RapidAPI-Key': 'e0dd76157emsh7080062fcaf0e78p12f094jsn0125d1362bbb',
-    //         'X-RapidAPI-Host': 'ai-powered-text-summarizer.p.rapidapi.com'
-    //     },
-    //     body: encodedParams
-    // };
+    const Summaryptions = {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/x-www-form-urlencoded',
+            'X-RapidAPI-Key': 'e0dd76157emsh7080062fcaf0e78p12f094jsn0125d1362bbb',
+            'X-RapidAPI-Host': 'ai-powered-text-summarizer.p.rapidapi.com'
+        },
+        body: encodedParams
+    };
 
-    // const resSummary = await fetch(SummaryUrl, Summaryptions);
-    // const { summary } = await resSummary.json();
+    const resSummary = await fetch(SummaryUrl, Summaryptions);
+    const { summary } = await resSummary.json();
 
-    // console.log(summary);
+    console.log(summary);
 
     // translate summay
     const translateUrl = 'https://text-translator2.p.rapidapi.com/translate';
@@ -49,7 +51,7 @@ async function getSummary(videoId) {
         body: new URLSearchParams({
             source_language: 'auto',
             target_language: 'hi',
-            text: subtitles
+            text: summary
         })
     };
 
