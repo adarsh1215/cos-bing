@@ -1,10 +1,16 @@
+// importing modules
+import { Link } from "react-router-dom"; 
+
+
+// import style
 import "./videoDetailsBox.css"
 
+// importing helper func
 import formatNumber from "../../../helpersFunctions/formatNumber";
 
 function VideoDetailsBox({ videoDetails, channelDetails }) {
 
-    const { title, channelTitle, description, viewCount, thumbnail } = videoDetails;
+    const { title, channelTitle, description, viewCount, thumbnail, channelId } = videoDetails;
     console.log(channelDetails);
 
     const channelThumbnail = channelDetails == undefined ? "": channelDetails.thumbnail[0];
@@ -22,7 +28,7 @@ function VideoDetailsBox({ videoDetails, channelDetails }) {
     
                 <div className="channelInfo">
                     <div className="watchMidChannelLogo">
-                        <img src= {channelThumbnail.url} alt="" />
+                        <Link to = {`/channel?channelId=${channelId}`} ><img src= {channelThumbnail.url} alt="" /></Link> 
                     </div>
                     <div className="channelLogoRight">
                         <div className="videoDetailchannelName">

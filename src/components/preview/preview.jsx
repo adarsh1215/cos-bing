@@ -1,4 +1,4 @@
-import { createSearchParams, useNavigate } from "react-router-dom";
+import { createSearchParams, useNavigate, Link } from "react-router-dom";
 
 import "./preview.css"
 
@@ -6,7 +6,7 @@ function Preview({data}) {
 
     const navigate = useNavigate();
 
-    var { videoId, title, channelTitle, thumbnail, authorThumbnail, channelThumbnail } = data;
+    var { videoId, title, channelTitle, thumbnail, authorThumbnail, channelThumbnail, channelId } = data;
 
     function playVideo(event) {
         console.log(createSearchParams({videoId: videoId}));
@@ -28,7 +28,7 @@ function Preview({data}) {
                 </button>
                 <div className="previewFooter">
                     <div className="previewFooterLogo">
-                        <img src = {channelThumbnail[0].url} alt= {channelTitle} width= "100%" className="channelLogo" />
+                        <Link to = { `/channel?channelId=${channelId}` } ><img src = {channelThumbnail[0].url} alt= {channelTitle} width= "100%" className="channelLogo" /></Link>
                     </div>
                     <div className="previewFooterText">
                         <div className="videoTitle">

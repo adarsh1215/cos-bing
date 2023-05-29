@@ -16,6 +16,8 @@ async function getChannelDetails(channelId) {
 
     console.log("getChannelDetails called");
 
+    console.log(meta);
+
     return meta;
 }
 

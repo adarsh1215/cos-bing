@@ -1,0 +1,54 @@
+.channelPageHeader {
+
+    width: 100%;
+    border-bottom: 1px black;
+    border-bottom-style:inset;
+    background-color: rgb(164, 132, 194);
+    position: sticky;
+    top: 0px;
+}
+
+.channleSectionList {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 2rem;
+    font-weight:500;
+    font-size: larger;
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+.channleSectionList a {
+
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    height: 100%;
+    width: 5rem;
+    box-sizing: border-box;
+}
+
+.channelSectionItem {
+    display: flex;
+    justify-content: center;
+}
+
+.channelSectionItem::before {
+
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.channelSectionItem:hover::before {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: .2rem rgb(74, 65, 65) solid;
+}

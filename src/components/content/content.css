@@ -3,6 +3,24 @@
     width: 80%;
     border-radius: 1.2rem;
     /* border: 1px solid black; */
+    transition: 0.5s;
+    background-color: whitesmoke;
+}
+
+#content:hover {
+
+    transform:translate(5%, 5%) scale(1.1);
+    animation: contentAnimation 5s infinite linear alternate;
+    animation-delay: 0.3s;
+}
+
+@keyframes contentAnimation{
+
+    0% {background-color: rgb(222, 159, 251);}
+    25% {background-color: rgb(188, 243, 188);}
+    50% {background-color: rgb(79, 193, 255);}
+    75% {background-color: rgb(250, 194, 194);}
+    100% {background-color: rgb(171, 141, 200);}
 }
 
 #content {

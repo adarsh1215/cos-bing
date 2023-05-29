@@ -9,7 +9,7 @@
 }
 
 .insidePreview {
-
+    
     /* background-color: blueviolet; */
     width: 100%;
     height:max-content;
@@ -17,18 +17,20 @@
     border: none;
     border-radius: 5%;
     overflow: hidden;
+    transition: .5s;
 }
 
 
 .thumbnail {
 
     border-radius: 5%;
+    transition: 0.5s;
 }
 
-.thumbnail:hover {
+.insidePreview:hover {
 
-    transform: scale(1.1);
-    transition: 0.5s;
+    box-sizing: border-box;
+    transform: scale(105%);
 }
 
 .previewFooter {
