@@ -26,8 +26,6 @@
 #content {
 
     display: grid;
-    /* grid-template-columns: repeat(3, 33%); */
-    /* grid-auto-rows: 50%; */
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     column-gap: 0.5rem;
     row-gap: 1%;

@@ -13,7 +13,7 @@ function VideoDetailsBox({ videoDetails, channelDetails }) {
     const { title, channelTitle, description, viewCount, thumbnail, channelId } = videoDetails;
     console.log(channelDetails);
 
-    const channelThumbnail = channelDetails == undefined ? "": channelDetails.thumbnail[0];
+    const channelThumbnail = channelDetails == undefined ? "": (channelDetails.meta.thumbnail)[0];
 
     console.log(videoDetails);
 
@@ -35,7 +35,7 @@ function VideoDetailsBox({ videoDetails, channelDetails }) {
                             {channelTitle}
                         </div>
                         <div className="subscribeCount">
-                            {channelDetails.subscriberCount} subscribers
+                            {channelDetails.meta.subscriberCount} subscribers
                         </div>
                     </div>
                 </div>

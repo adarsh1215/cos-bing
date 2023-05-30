@@ -1,11 +1,14 @@
 .channelPageHeader {
 
     width: 100%;
+    height: 4rem;
     border-bottom: 1px black;
     border-bottom-style:inset;
-    background-color: rgb(164, 132, 194);
+    background-color: white;
     position: sticky;
     top: 0px;
+    z-index: 1;
+    margin-top: -2px;
 }
 
 .channleSectionList {
@@ -13,7 +16,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 2rem;
+    height: 100%;
     font-weight:500;
     font-size: larger;
     list-style: none;
@@ -21,34 +24,51 @@
     padding: 0%;
 }
 
-.channleSectionList a {
-
-    color: inherit;
-    text-decoration: none;
-    position: relative;
-    height: 100%;
-    width: 5rem;
-    box-sizing: border-box;
-}
-
 .channelSectionItem {
     display: flex;
+    align-items: center;
     justify-content: center;
+    position: relative;
+    width: 8rem;
+    height: 100%;
+    cursor: pointer;
 }
 
 .channelSectionItem::before {
 
     content: "";
     position: absolute;
-    width: 10%;
+    width: 0%;
     height: 100%;
-    transition: 0.5s;
+    transition: .5s;
 }
 
 .channelSectionItem:hover::before {
 
     position: absolute;
-    width: 100%;
     height: 100%;
     border-bottom: .2rem rgb(74, 65, 65) solid;
+    animation: SectionHoverAnimation .5s ease-in-out forwards;
+}
+
+@keyframes SectionHoverAnimation {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+.sectionText {
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    font-size: 1.5rem;
+}
+
+.sectionText:hover {
+
+    transform: scale(1.5);
+
 }

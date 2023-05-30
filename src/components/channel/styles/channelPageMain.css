@@ -1,14 +1,21 @@
 .channelPageMain {
 
     width: 80%;
-    background-color: rgb(164, 132, 194);
-    padding: .5rem;
+    /* background-color: rgb(164, 132, 194); */
+    /* padding: .5rem; */
     padding-top: 0rem;
-    overflow:overlay;
+    overflow:hidden;
+}
+
+.channelPageMain:hover {
+
+    overflow: overlay;
 }
 
 .channelBanner {
 
+    padding: .3rem;
+    border-radius: .7rem;
     width: 100%;
     box-sizing: border-box;
 }

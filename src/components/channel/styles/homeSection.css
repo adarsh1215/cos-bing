@@ -1,0 +1,11 @@
+.homeSection {
+
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    column-gap: 0.5rem;
+    justify-content:space-evenly;
+    padding: .5rem;
+    padding-top: 1rem;
+}

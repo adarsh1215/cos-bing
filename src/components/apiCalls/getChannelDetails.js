@@ -12,13 +12,11 @@ async function getChannelDetails(channelId) {
 
     const res = await fetch(url, options);
 
-    const { meta } = await res.json();
+    const data = await res.json();
 
-    console.log("getChannelDetails called");
+    console.log(data);
 
-    console.log(meta);
-
-    return meta;
+    return data;
 }
 
 export default getChannelDetails;

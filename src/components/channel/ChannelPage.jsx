@@ -16,10 +16,16 @@ function ChannelPage() {
 
     const [params, setParams] = useSearchParams();
     const [channelDetail, setChannelDetail] = useState({});
+    const [channelVideos, setChannelVideos] = useState([]);
 
     useEffect(() => {
 
-        getChannelDetails(params.get("channelId")).then(detail => setChannelDetail(detail));
+        getChannelDetails(params.get("channelId")).then(detail => {
+            
+            setChannelDetail(detail.meta);
+            setChannelVideos(detail.data);
+            console.log(detail);
+        });
     }, [params]);
 
     const { description, title, image, subscriberCount, thumbnail } = channelDetail;
@@ -29,7 +35,7 @@ function ChannelPage() {
     return (
         
         <div className="channelPage">
-            <ChannelPageMain channelDetail = {channelDetail} />
+            <ChannelPageMain channelDetail = {channelDetail} channelVideos = {channelVideos} />
             <ChannelPageSideBar />
         </div>
     );
