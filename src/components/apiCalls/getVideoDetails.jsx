@@ -1,3 +1,4 @@
+
 async function getVideoDetails(videoId) {
 
     const url = `https://youtube-v3-alternative.p.rapidapi.com/video?id=${videoId}`;

@@ -1,0 +1,31 @@
+.ChannelPageSideBarMiddle {
+
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.csm {
+
+    display: flex;
+    justify-content: right;
+    column-gap: 5rem;
+    width: 100%;
+}
+
+.csm> div {
+
+    width: 30%;
+}
+
+.csm>:first-child {
+
+    font-weight: bolder;
+    font-size: larger;
+    opacity: 0.7;
+}
+
+.csm>:nth-child(2) {
+
+    font-weight: bold;
+}

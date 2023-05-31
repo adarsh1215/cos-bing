@@ -1,12 +1,19 @@
 // importing style
 import "./styles/channelPageSideBar.css"
 
-function ChannelPageSideBar() {
+// importing components
+import ChannelPageSideBarUpper from "./sidebarComponents/ChannelPageSideBarUpper";
+import ChannelPageSideBarMiddle from "./sidebarComponents/ChannelPageSideBarMiddle";
+import ChannelPageSideBarLower from "./sidebarComponents/ChannelPageSidebarLower";
+
+function ChannelPageSideBar({ channelDetail }) {
 
     return (
 
         <div className="channelPageSidebar">
-            i'm channel page sidebar
+            <ChannelPageSideBarUpper channelDetail = { channelDetail } />
+            <ChannelPageSideBarMiddle channelDetail = { channelDetail } />
+            <ChannelPageSideBarLower channelDetail = { channelDetail } />
         </div>
     );
 }

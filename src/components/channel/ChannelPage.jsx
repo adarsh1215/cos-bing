@@ -36,7 +36,7 @@ function ChannelPage() {
         
         <div className="channelPage">
             <ChannelPageMain channelDetail = {channelDetail} channelVideos = {channelVideos} />
-            <ChannelPageSideBar />
+            <ChannelPageSideBar channelDetail = { channelDetail } />
         </div>
     );
 }

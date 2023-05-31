@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import Preview from "../preview/preview";
 import "./content.css"
 // import data from "./tempdata";
-import getVideos from "../apiCalls/getVideos.js";
+import getVideos from "../apiCalls/getVideos.jsx";
 
 function Content() {
 

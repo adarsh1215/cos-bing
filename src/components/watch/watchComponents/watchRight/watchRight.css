@@ -3,5 +3,11 @@
     width: 20%;
     box-sizing: border-box;
     border: 1px solid blueviolet;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#WatchRight:hover {
+
     overflow-y: overlay;
 }

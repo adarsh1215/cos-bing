@@ -32,7 +32,7 @@ function WatchRight() {
 
                     return (
 
-                        <Preview key={idx} data = {video} />
+                        video.type == "video"? <Preview key={idx} data = {video} />: null
                     );
                 })
             }

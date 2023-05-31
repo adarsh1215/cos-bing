@@ -1,0 +1,24 @@
+.csbl {
+
+    display: flex;
+    height: 3.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.csblSubscribeBtn {
+
+    all: inherit;
+    width: 10rem;
+    background-color: #2a2828;
+    color: white;
+    height: 80%;
+    border-radius: 5rem;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.csblSubscribeBtn:hover {
+
+    cursor: pointer;
+}

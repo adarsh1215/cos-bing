@@ -14,8 +14,7 @@
 
 .channelBanner {
 
-    padding: .3rem;
-    border-radius: .7rem;
+    border-radius: 1rem;
     width: 100%;
     box-sizing: border-box;
 }
